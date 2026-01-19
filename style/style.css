@@ -24,6 +24,7 @@ body {
 
 
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -74,6 +75,25 @@ nav ul li {
     gap: 8px;
     cursor: pointer;
     font-size: 16px;
+
+    transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: linear-gradient(45deg, #bb8c16e2, #b51b96);
+    /* slightly brighter gradient */
+    transform: translateY(-5px);
+    /* lift button slightly */
+    box-shadow: 0 6px 15px rgba(149, 63, 132, 0.35);
+    /* subtle glow */
+}
+
+/* Active effect (on click) */
+.subscribe-btn:active {
+    transform: translateY(1px);
+    /* press-down effect */
+    box-shadow: 0 3px 8px rgba(255, 43, 214, 0.25);
 }
 
 .subscribe-btn img {
@@ -82,7 +102,7 @@ nav ul li {
 
 #banner {
     position: relative;
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,15 +118,20 @@ nav ul li {
 }
 
 
-
-
 #banner::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.35));
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(26, 11, 46, 0) 60%,
+            #1A0B2E 100%
+        ),
+        radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.35));
     z-index: 1;
 }
+
 
 .banner-content {
     position: relative;
@@ -126,13 +151,15 @@ nav ul li {
     align-items: center;
     margin: 0 auto 32px;
     position: relative;
-    z-index: 1; /* Add this to establish stacking context */
+    z-index: 1;
+    /* Add this to establish stacking context */
 }
 
 .mic-circle img {
     width: 30%;
     position: relative;
-    z-index: 2; /* Make sure mic icon stays above the circle */
+    z-index: 2;
+    /* Make sure mic icon stays above the circle */
 }
 
 .new-badge {
@@ -162,34 +189,38 @@ nav ul li {
 
 
 
-h1 {
-    font-size: 58px;
-    margin-bottom: 14px;
+#banner h1 {
+    font-size: 60px;
+    margin-top: 40px;
     letter-spacing: 0.5px;
+    font-weight: 800;
 }
 
-p {
+#banner p {
+    margin-top: 10px;
     max-width: 560px;
     margin: 0 auto 38px;
     opacity: 0.75;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
 .cta-btns {
     display: flex;
-    gap: 22px;
+    gap: 10px;
     justify-content: center;
+    margin-top: 24px;
 }
 
 .spot {
-    background: linear-gradient(45deg, #ff2bd6, #ffb800);
+    background: linear-gradient(30deg, #ffb800, #ff2bd6);
     border: none;
     padding: 14px 28px;
     border-radius: 30px;
     color: white;
     font-weight: 600;
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -203,12 +234,114 @@ p {
     border-radius: 30px;
     color: #00ff9c;
     font-weight: 600;
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
 }
 
+.spot,
+.subs {
+    transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.spot:hover {
+    background: linear-gradient(45deg, #bb8c16e2, #b51b96);
+    /* brighter gradient on hover */
+    transform: translateY(-5px);
+    /* lift effect */
+    box-shadow: 0 6px 15px rgba(152, 59, 134, 0.35);
+    /* subtle glow */
+}
+
+.spot:active {
+    transform: translateY(1px);
+    /* press-down effect */
+    box-shadow: 0 3px 8px rgba(255, 43, 214, 0.25);
+}
+
+.subs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(55, 57, 56, 0.35);
+}
+
+.subs:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(112, 132, 124, 0.25);
+}
+
+
 .cta-buttons img {
     width: 18px;
+}
+
+#about {
+    align-items: center;
+    text-align: center;
+    background-color: #1A0B2E;
+    padding: 50px 200px 120px;
+}
+
+#about .about-text {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text h2 {
+
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+
+}
+
+.about-text .pp {
+    margin: 0 auto;
+    align-items: center;
+    font-size: 16px;
+    width: 40%;
+    text-align: center;
+    line-height: 30px;
+        opacity: 0.75;
+}
+
+.about-text .p {
+    margin: 22px auto;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.75;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 80px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    
+}
+
+.cards h2 {
+    margin-top: 80px;
+    font-size: 48px;
+    font-weight: 900;
+    color: #00FF88;
+    text-align: center;
+
+}
+
+.cards p {
+    margin-top: 16px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 0.85;
 }
