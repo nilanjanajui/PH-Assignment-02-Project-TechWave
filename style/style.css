@@ -14,20 +14,24 @@
 }
 
 
+
 body {
     background: #1A0B2E;
     color: white;
     min-height: 100vh;
 }
 
-/* ================= NAV ================= */
+
+
 
 nav {
     display: flex;
     justify-content: space-between;
 
     align-items: center;
-    padding: 24px 90px;
+    height: 96px;
+    padding: 0 90px;
+
 }
 
 .logo {
@@ -37,7 +41,7 @@ nav {
 }
 
 .logo span {
-    background: linear-gradient(135deg, #ffb800 0%, #ff2bd6 80%);
+    background: linear-gradient(-1deg, #e1a40bcd 0%, #ff2bd6 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -54,11 +58,12 @@ nav ul {
 nav ul li {
     cursor: pointer;
     opacity: 0.85;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .subscribe-btn {
-    background: linear-gradient(45deg, #ff2bd6, #ffb800);
+    background: linear-gradient(45deg, #f9b50be2, #e723c0);
     border: none;
     padding: 12px 28px;
     border-radius: 30px;
@@ -68,30 +73,33 @@ nav ul li {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .subscribe-btn img {
     width: 14px;
 }
 
-/* ================= HERO ================= */
-
 #banner {
     position: relative;
-    width: 100%;
-    min-height: calc(100vh - 90px);
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
     background-image: url("../assets/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
 }
 
-/* darken wave slightly like the reference */
+
+
+
 #banner::after {
     content: "";
     position: absolute;
@@ -105,7 +113,6 @@ nav ul li {
     z-index: 2;
 }
 
-/* ================= MIC CIRCLE ================= */
 
 .mic-circle {
     width: 465px;
@@ -119,27 +126,41 @@ nav ul li {
     align-items: center;
     margin: 0 auto 32px;
     position: relative;
+    z-index: 1; /* Add this to establish stacking context */
 }
 
 .mic-circle img {
     width: 30%;
-    /* height: 20%; */
+    position: relative;
+    z-index: 2; /* Make sure mic icon stays above the circle */
 }
 
-/* NEW badge */
 .new-badge {
     position: absolute;
-    top: 12px;
-    right: -18px;
-    background: #00ff9c;
-    color: #000;
-    padding: 6px 16px;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 20px;
+    top: 30px;
+    right: 40px;
+
+    background: linear-gradient(180deg, #28e7a7, #00E5A8);
+    color: #0b1f17;
+
+    padding: 7px 15px;
+    width: 80px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 180, 0.5),
+        0 0 28px rgba(0, 255, 180, 0.2);
+
+    z-index: 5;
 }
 
-/* ================= TEXT ================= */
+
 
 h1 {
     font-size: 58px;
@@ -155,9 +176,8 @@ p {
     font-size: 15px;
 }
 
-/* ================= BUTTONS ================= */
 
-.cta-buttons {
+.cta-btns {
     display: flex;
     gap: 22px;
     justify-content: center;
@@ -192,27 +212,3 @@ p {
 .cta-buttons img {
     width: 18px;
 }
-
-/* ================= RESPONSIVE ================= */
-/* 
-@media (max-width: 768px) {
-    nav {
-        padding: 20px 30px;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    #banner {
-        background-size: contain;
-    }
-
-    h1 {
-        font-size: 44px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-} */
