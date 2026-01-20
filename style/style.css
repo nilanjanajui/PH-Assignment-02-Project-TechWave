@@ -49,9 +49,11 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 48px;
+    align-items: center;
 }
 
 nav ul li {
+    align-items: center;
     cursor: pointer;
     opacity: 0.85;
     font-size: 16px;
