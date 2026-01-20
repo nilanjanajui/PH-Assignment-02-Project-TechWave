@@ -689,3 +689,214 @@ nav ul li {
     color: #FAFAFA;
     opacity: 0.6;
 }
+
+
+@media (max-width: 576px) {
+
+    nav {
+        padding: 0 20px;
+        height: 72px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+    #banner {
+        min-height: auto;
+        padding: 80px 20px 60px;
+    }
+
+    .mic-circle {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 24px;
+    }
+
+    .new-badge {
+        top: 16px;
+        right: 16px;
+        font-size: 13px;
+        width: auto;
+        padding: 5px 12px;
+    }
+
+    #banner h1 {
+        font-size: 34px;
+        margin-top: 24px;
+    }
+
+    #banner p {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .cta-btns {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .spot,
+    .subs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #about {
+        padding: 60px 20px 80px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-text .pp {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .cards h2 {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+
+    #grid {
+        padding: 80px 20px;
+    }
+
+    #grid .why-text h2 {
+        font-size: 32px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 24px;
+        max-height: none;
+    }
+
+    .grid-cards1,
+    .grid-cards2,
+    .grid-cards3,
+    .grid-cards4,
+    .grid-cards5 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .grid-container > div {
+        padding: 28px;
+    }
+
+    #episode {
+        padding: 60px 20px;
+    }
+
+    .podcast h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .frame {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .frame h3 {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .frame p {
+        font-size: 14px;
+    }
+
+    .host h2 {
+        font-size: 32px;
+        margin-top: 80px;
+    }
+
+    .host .intro-host {
+        flex-direction: column;
+        margin: 30px 20px;
+        padding: 28px;
+        text-align: center;
+    }
+
+    .intro-host h3 {
+        font-size: 24px;
+    }
+
+    .intro-host p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .social-img {
+        justify-content: center;
+    }
+
+    #foot .foot-text {
+        min-height: auto;
+        padding: 60px 20px 40px;
+        text-align: center;
+    }
+
+    .foot-text h1 {
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    /* PLATFORM LINKS GRID */
+    .foot-social {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px 40px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .foot-social a {
+        margin: 0;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .foot-social a img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .foot-social a p {
+        font-size: 14px;
+        opacity: 0.75;
+    }
+
+    /* COPYRIGHT */
+    .copy {
+        margin-top: 30px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+}
