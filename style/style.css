@@ -37,7 +37,7 @@ nav {
 }
 
 .logo span {
-    background: linear-gradient(-1deg, #e1a40bcd 0%, #ff2bd6 80%);
+    background: linear-gradient(20deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -450,7 +450,7 @@ nav ul li {
 }
 
 .frame {
-    height: 450px;
+    height: 470px;
     background: #250D44;
     border-radius: 20px;
     box-shadow:
@@ -489,6 +489,23 @@ nav ul li {
     font-size: 16px;
     color: #FFFFFF;
     opacity: 0.75;
+}
+
+.frame .time {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.frame .time img {
+    margin: 0;
+}
+
+.frame .time p {
+    color: #00FF88;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 
@@ -564,7 +581,6 @@ nav ul li {
 }
 
 
-/* icon */
 .social-img img {
     width: 18px;
     height: 18px;
@@ -572,25 +588,21 @@ nav ul li {
     z-index: 1;
 }
 
-/* hover animation */
 .social-img a:hover {
     transform: translateY(-3px);
 }
 
-/* subtle glow on hover */
 .social-img a:hover {
     box-shadow: 0 0 6px rgba(170, 54, 112, 0.6);
 }
 
-/* Hide the checkbox */
+
 #menu-toggle {
     display: none;
 }
 
-/* Hamburger styling */
 .hamburger {
     display: none;
-    /* only on mobile */
     flex-direction: column;
     justify-content: space-between;
     width: 28px;
@@ -607,3 +619,71 @@ nav ul li {
     transition: all 0.3s ease;
 }
 
+
+#foot .foot-text {
+    position: relative;
+    min-height: 45vh;
+    text-align: center;
+    padding: 60px 20px;
+
+    background-image: url(../assets/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.foot-text h1 {
+    margin-top: 90px;
+    color: #FFFFFF;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.foot-text h1 span {
+    background: linear-gradient(20deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
+}
+
+
+
+.foot-social {
+    margin: 32px auto 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.foot-social a {
+    display: flex;
+    margin: 0 15px;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    vertical-align: top;
+    
+}
+
+.foot-social a p {
+    color: #FFFFFF;
+    opacity: 0.75;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.foot-social a img {
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.copy {
+    margin-top: 35px;
+    font-size: 16px;
+    color: #FAFAFA;
+    opacity: 0.6;
+}
