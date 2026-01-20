@@ -710,6 +710,10 @@ nav ul li {
         display: flex;
     }
 
+    .subscribe-btn {
+        display: none;
+    }
+
 
     #banner {
         min-height: auto;
@@ -742,7 +746,7 @@ nav ul li {
     }
 
     .cta-btns {
-        flex-direction: column;
+        display: flex;
         gap: 14px;
     }
 
@@ -754,27 +758,45 @@ nav ul li {
 
     #about {
         padding: 60px 20px 80px;
+        text-align: center;
     }
 
     .about-text h2 {
-        font-size: 32px;
+        font-size: 34px;
+        margin-bottom: 16px;
     }
 
     .about-text .pp {
         width: 100%;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .about-text .p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 32px;
     }
 
     .cards {
-        flex-direction: column;
-        gap: 40px;
-        margin-top: 60px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        margin-top: 40px;
+        padding-top: 40px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
     }
 
     .cards h2 {
-        font-size: 36px;
-        margin-top: 40px;
+        font-size: 42px;
+        margin-top: 0;
+    }
+
+    .cards p {
+        font-size: 14px;
+        opacity: 0.8;
     }
 
 
@@ -858,6 +880,11 @@ nav ul li {
         min-height: auto;
         padding: 60px 20px 40px;
         text-align: center;
+        #foot .foot-text {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     }
 
     .foot-text h1 {
@@ -866,7 +893,6 @@ nav ul li {
         margin-bottom: 24px;
     }
 
-    /* PLATFORM LINKS GRID */
     .foot-social {
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -893,7 +919,6 @@ nav ul li {
         opacity: 0.75;
     }
 
-    /* COPYRIGHT */
     .copy {
         margin-top: 30px;
         font-size: 13px;
