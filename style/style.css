@@ -529,6 +529,45 @@ nav ul li {
 .social-img {
     margin-top: 16px;
     display: flex;
-    gap: 8px;
+    gap: 15px;
     align-items: center;
+}
+
+.social-img a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    background:
+        linear-gradient(#351165, #351165) padding-box,
+        linear-gradient(135deg, #a855f7, #ec4899) border-box;
+
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* icon */
+.social-img img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* hover animation */
+.social-img a:hover {
+    transform: translateY(-3px);
+}
+
+/* subtle glow on hover */
+.social-img a:hover {
+    box-shadow: 0 0 6px rgba(170, 54, 112, 0.6);
 }
